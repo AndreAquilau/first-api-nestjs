@@ -301,7 +301,7 @@ export class TasksController {
     return task;
   }
 
-  // localhost:3000/tasks
+  // localhost:3000/tasks/1
   @Delete(':id')
   async delete(@Param('id') id: number) {
     this.taskService.delete(id);
