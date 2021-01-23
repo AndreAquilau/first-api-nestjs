@@ -138,6 +138,14 @@ export class CatsService {
 nest generate provider controllers/tasks/shared/tasks.service
 ```
 #### Nest Generate Class
+> task.ts
+```ts
+export class Task {
+  id: number;
+  description: string;
+  completed: boolean;
+}
+```
 ```bash
 nest generate class controllers/tasks/shared/task
 ```
@@ -284,6 +292,7 @@ export class TasksController {
     return task;
   }
 
+  // localhost:3000/tasks/1
   @Put(':id')
   async update(@Param() id: number, @Body() task: Task): Promise<Task> {
     task.id = id;
@@ -292,6 +301,7 @@ export class TasksController {
     return task;
   }
 
+  // localhost:3000/tasks
   @Delete(':id')
   async delete(@Param('id') id: number) {
     this.taskService.delete(id);
