@@ -188,7 +188,7 @@ import { TasksModule } from './controllers/tasks/tasks.module';
 })
 export class AppModule {}
 ```
-#### CRUD Basi
+#### CRUD Basic
 > task.ts
 ```ts
 export class Task {
